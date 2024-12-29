@@ -1,10 +1,15 @@
-n=int(input("Enter Limit: "))
-list=[];req_list=[];j=0
-for i in range(n):
-    list.append(int(input(f"Number{i}: ")))
-list.sort()
-while(j<len(list)-j-1):
-    req_list.append(list[len(list)-j-1])
-    req_list.append(list[j])
-    j+=1
-print(req_list)
+mob_list=[];i=0;count=0
+while(1):
+    user=input()
+    if(user=='q' or user=='Q'):
+        break
+    else:
+        mob_list.append(user)
+    i+=1
+if(i!=5):
+    print("INPUT LIMIT IS 5")
+    exit(0)
+for i in mob_list:
+    if(len(i)==10 and i.isdigit()):
+        count+=1
+print(count)
